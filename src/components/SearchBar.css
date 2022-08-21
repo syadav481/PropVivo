@@ -1,0 +1,25 @@
+.SearchBar{
+   box-sizing: border-box;
+   border-color: black; 
+   width: 450px; 
+   height: 30px; 
+   border: black 1px; 
+   border-radius: 4px;
+   font-size: 20px; 
+   padding-left: 15px; 
+   color: black;
+   border-style: solid; 
+}
+.SearchDiv{
+    display: flex;
+    position: relative;
+    min-width: 410px;
+    width: 40%;
+    max-width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    height: 41px;
+    z-index: 999;
+    margin: 0 auto 0 10px;
+}

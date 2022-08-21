@@ -1,0 +1,42 @@
+
+
+.Navbar{
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 3px 8px 1px #969696;
+  width: 100%;
+  display: flex;
+}
+
+.Navbar .left-side{
+  padding: 1%;
+  display: flex; 
+  justify-content: left;
+  align-items: center;
+  flex: 50%;
+}
+.Navbar .right-side{
+  flex: 50%;
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1%; 
+}
+
+.right-side input {
+  border: none;
+  border-radius: 0;
+  background: none;
+  padding: 10px 40px 10px 10px;
+  height: auto;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.PvAsstBtn{
+  border: none; 
+  background: none;
+}
+button:hover{
+  cursor: pointer;
+}
