@@ -4,6 +4,8 @@ import pvAssistant from "../assets/pvAssistant.png";
 import SearchBar from "./SearchBar";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { Squash as Hamburger } from "hamburger-react";
+import SideBar from "./SideBar";
 
 const RenderInWindow = (props) => {
   const [container, setContainer] = useState(null);
@@ -32,20 +34,25 @@ const RenderInWindow = (props) => {
 
 function Navbar() {
   const [open, setOpen] = useState();
+  const [isToggled, setToggled] = useState(false);
   return (
-    <div className="Navbar">
-      <div className="left-side">
-        <a href="https://www.devpropvivo.com/" target="_blank">
-          <img src={pvLogo} width="50" height="50"></img>
-        </a>
+    <div>
+      <div className="Navbar">
+        <div className="left-side">
+          <Hamburger toggled={isToggled} toggle={setToggled}></Hamburger>
+          <a href="https://www.devpropvivo.com/" target="_blank">
+            <img src={pvLogo} width="50" height="50"></img>
+          </a>
+        </div>
+        <div className="right-side">
+          <SearchBar />
+          <button className="PvAsstBtn" onClick={() => setOpen(true)}>
+            <img src={pvAssistant} width="52" height="52"></img>
+          </button>
+          {open && <RenderInWindow>hello world</RenderInWindow>}
+        </div>
       </div>
-      <div className="right-side">
-        <SearchBar />
-        <button className="PvAsstBtn" onClick={() => setOpen(true)}>
-          <img src={pvAssistant} width="52" height="52"></img>
-        </button>
-        {open && <RenderInWindow>hello world</RenderInWindow>}
-      </div>
+      {isToggled && <SideBar></SideBar>}
     </div>
   );
 }
