@@ -34,7 +34,7 @@ const RenderInWindow = (props) => {
 
 function Navbar() {
   const [open, setOpen] = useState();
-  const [isToggled, setToggled] = useState(false);
+  const [isToggled, setToggled] = useState(true);
   return (
     <div>
       <div className="Navbar">
